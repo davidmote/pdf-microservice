@@ -1,5 +1,7 @@
 # PDF Microservice
 
+[![Build Status](https://travis-ci.com/Codebiosys/pdf-microservice.svg?token=sqxCEuNQWHfr2F3qwRmC&branch=master)](https://travis-ci.com/Codebiosys/pdf-microservice)
+
 This service exposes an HTTP endpoint for uploading html mustache documents and receiving
 a PDF file attachment response.
 
