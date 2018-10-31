@@ -1,10 +1,15 @@
 # Global Config
-language: python
 sudo: required
 
 services:
   - docker
 
-script:
-		- docker-compose run --rm api flake8
-		- docker-compose run --rm api pytest -vv
+# Docker run will build everything we need.
+build: ""
+
+jobs:
+  include:
+    - stage: "API"
+      script:
+        - docker-compose run --rm pdf flake8
+        - docker-compose run --rm pdf pytest -vv
