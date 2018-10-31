@@ -1,0 +1,31 @@
+#
+# Dockerfile for testing PDF Microservice service
+#
+
+FROM python:3.6
+
+RUN apt-get update && apt-get install -yq \
+    python3-cffi \
+    libcairo2 \
+    libpango-1.0-0 \
+    libpangocairo-1.0-0 \
+    libgdk-pixbuf2.0-0 \
+    libffi-dev \
+    shared-mime-info
+
+# Declare application root for easier copying of files
+WORKDIR /app
+
+# Copy version specs first so they can be cached by Docker
+COPY requirements* ./
+RUN pip install -r requirements-development.txt
+
+RUN pip install gunicorn
+
+# Copy source code last so it can be mounted in Compose
+COPY . .
+
+ENV PORT 8000
+
+# Default command to get the application up and running
+CMD ["./entrypoint-development.sh"]

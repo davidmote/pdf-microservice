@@ -1,0 +1,21 @@
+#
+# Docker Compose file for quickly setting up a development environment and tools
+#
+
+version: "3"
+
+services:
+
+  #
+  # Flask API service
+  #
+  pdf:
+    build:
+      context: .
+      dockerfile: Dockerfile-production
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000

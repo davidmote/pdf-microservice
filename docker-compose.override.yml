@@ -1,0 +1,19 @@
+#
+# Docker Compose file for quickly setting up a development environment
+#
+
+version: "3"
+
+services:
+
+  #
+  # Flask API service
+  #
+  pdf:
+    build:
+      context: .
+      dockerfile: Dockerfile-development
+    volumes:
+      - ./pdf_microservice:/app/pdf_microservice
+      - ./tests:/app/tests
+      - ./htmlcov:/app/htmlcov

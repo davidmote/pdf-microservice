@@ -1,0 +1,10 @@
+# Global Config
+language: python
+sudo: required
+
+services:
+  - docker
+
+script:
+		- docker-compose run --rm api flake8
+		- docker-compose run --rm api pytest -vv
