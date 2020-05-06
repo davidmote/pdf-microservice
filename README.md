@@ -39,18 +39,6 @@ This tool uses [Flask](http://flask.pocoo.org/) to serve the http endpoint
     > cd pdf-microservice
     ```
 
-1. Provision a new Docker machine called `pdf-microservice`:
-
-    ```
-    > docker-machine create -d virtualbox pdf-microservice
-    > eval $(docker-machine env pdf-microservice)
-    > docker-machine ls
-    NAME                  ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER        ERRORS
-    pdf-microservice   *        virtualbox   Running   tcp://192.168.99.102:2376           v18.06.0-ce
-    ```
-
-    **Note the asterisk in the "ACTIVE" column.**
-
 1. Build the application stack and start the services:
 
     ```
@@ -58,7 +46,7 @@ This tool uses [Flask](http://flask.pocoo.org/) to serve the http endpoint
     ```
 
 1. Once the application begins, the build process is complete you can post
-   the following via http to http://{docker-machine-ip}:8000/
+   the following via http to http://localhost:8000/
 
    Parameter | Required | Type | Description
    --- | --- | --- | ---
