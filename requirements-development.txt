@@ -1,7 +1,6 @@
 -r requirements.txt
 
-pytest==3.3.*               # Testing
-pytest-cov==2.5.*           # Coverage Integration
+pytest==5.4.*               # Testing
+pytest-cov==2.8.*           # Coverage Integration
 
-flake8==3.5.*               # Linting
-
+flake8==3.7.*               # Linting

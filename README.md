@@ -1,6 +1,8 @@
-# PDF Microservice
 
-[![Build Status](https://travis-ci.com/Codebiosys/pdf-microservice.svg?token=sqxCEuNQWHfr2F3qwRmC&branch=master)](https://travis-ci.com/Codebiosys/pdf-microservice)
+Note: This is a clone of https://github.com/Codebiosys/pdf-microservice.git,
+which is no longer maintained.
+
+# PDF Microservice
 
 This service exposes an HTTP endpoint for uploading html mustache documents and receiving
 a PDF file attachment response.
@@ -20,7 +22,7 @@ a PDF file attachment response.
 
 ### pydf
 
-This tool uses the [Pydf](http://github.com/Codebiosys/pydf.git) library
+This tool uses the [Pydf](http://github.com/davidmote/pydf.git) library
 to generate a pdf
 
 ### flask
@@ -33,7 +35,7 @@ This tool uses [Flask](http://flask.pocoo.org/) to serve the http endpoint
 1. Clone the application:
 
     ```
-    > git clone git@github.com:CodeBiosys/pdf-microservice
+    > git clone git@github.com:davidmote/pdf-microservice
     > cd pdf-microservice
     ```
 
@@ -71,7 +73,7 @@ This tool uses [Flask](http://flask.pocoo.org/) to serve the http endpoint
 
 ```
   > mkvirtualenv pydf-microservice
-  > git clone https://github.com/Codebiosys/pdf-microservice.git
+  > git clone https://github.com/davidmote/pdf-microservice.git
   > cd pdf-microservice
   > pip install -r requirements-develop.txt
   > pip install -e .

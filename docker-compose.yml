@@ -2,10 +2,9 @@
 # Docker Compose file for quickly setting up a development environment and tools
 #
 
-version: "3"
+version: "3.2"
 
 services:
-
   #
   # Flask API service
   #

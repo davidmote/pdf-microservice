@@ -1,3 +1,3 @@
-flask>=0.12.3
+flask>=1.1.2
 
-git+git://github.com/Codebiosys/pydf.git@0.2.0#egg=pydf
+git+git://github.com/davidmote/pydf.git@0.3.0#egg=pydf
